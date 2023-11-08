@@ -100,6 +100,10 @@ def nyBetaling():
                     fodboldtur.update({navn: (fodboldtur[navn] + kronerIndbetalt)})
                     print('Personens Konto er opdateret!')
                     print('Returner til betalings menu \n')
+                    # SAVES
+                    outfile = open(filename, 'wb')
+                    pickle.dump(fodboldtur, outfile)
+                    outfile.close()
                     betalinger()
             # No case - Bliver sendt tilbage til Betalings menuen... 
             # Dette er muligt fordi vi faktisk aldrig har manipuleret data indtil nu kun observeret den
@@ -140,8 +144,10 @@ def missingPaymentsFull():
 
 # Liste med top 3 / Bund 3????
 def top3MissingPayment():    
-    print('Not done yet... sorry :(')
-
+    top = sorted(fodboldtur.items(), key=lambda item: item[1])
+    for pair in top[:3]:
+        print(f"{pair[0]} har betalt {pair[1]}")
+   
     # Ved ærligt talt ikke hvor jeg skal starte...
     # Mine søge termer i google har været "Sorting dictionary python"
     # Det jeg har fundet på stack overflow var ikke behjælpsomt (sortere som regel kun 1 svar ud)
