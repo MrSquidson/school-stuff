@@ -197,7 +197,7 @@ def betalinger():
         # Passer ikke helt men jeg huskede man kunne gøre det og så i et kaffein mareridt gjorde jeg det
         # Antal folk der ikke kan læse hvad der står; 3
 
-    print(Fore.GREEN + '\nBETALINGER', numbercolor + '\n1: ', Fore.LIGHTBLUE_EX + 'Tilføj Betaling', numbercolor +  '\n2: ', Fore.BLUE + 'Print liste med alle der mangler at betale', numbercolor +  '\n3: ', Fore.MAGENTA + 'Print liste med Top 3 manglende (Not done)', numbercolor + '\n4: ', Fore.BLUE + 'Individuel Medlems status', numbercolor + '\n5: ', Fore.GREEN + 'Tilbage til start menuen' '\n', Fore.BLACK + " ")
+    print(Fore.GREEN + '\nBETALINGER', numbercolor + '\n1: ', Fore.LIGHTBLUE_EX + 'Tilføj Betaling', numbercolor +  '\n2: ', Fore.BLUE + 'Print liste med alle der mangler at betale', numbercolor +  '\n3: ', Fore.MAGENTA + 'Print liste med Top 3 manglende', numbercolor + '\n4: ', Fore.BLUE + 'Individuel Medlems status', numbercolor + '\n5: ', Fore.GREEN + 'Tilbage til start menuen' '\n', Fore.BLACK + " ")
 
     valg = input("Indtast dit valg: ")
     match valg:
