@@ -24,8 +24,12 @@ def printliste():
                 paymentRemaining = 4500 - v
                 print(f'{k} har betalt {v} og ', Fore.RED + f'mangler at betale {paymentRemaining}', Fore.BLACK + ' ')
             else:
+                if v > 4500:
                     # Hvis du har betalt 4500 får de denne besked...
-                    print(f'{k} har betalt {v} totalt og er derfor ', Fore.GREEN + 'færdig med at indbetale penge', Fore.BLACK + f'{k} kan derfor modtage {(v - 4500)} tilbage fra deres konto status')        
+                    print(f'{k} har betalt {v} totalt og er derfor', Fore.GREEN +'færdig med at indbetale penge', Fore.BLACK + f'{k} kan derfor modtage {(v - 4500)} tilbage fra deres konto status!')
+
+                else: 
+                    print(f'{k} har betalt {v} totalt og er derfor', Fore.GREEN +'færdig med at indbetale penge.', Fore.BLACK +' ')
         menu()
     except:
         print('Det virkede ikke')
@@ -82,6 +86,10 @@ def nyBetaling():
         print(f'Personen har indbetalt: {fodboldtur[navn]}kr.- til dato \n')
         print(f'Vil du ændre {navn}\'s indbetalings status med {kronerIndbetalt}?')
         print(f'Deres nye konto status vil være {(fodboldtur[navn] + kronerIndbetalt)}kr.- \n')
+        if ((fodboldtur[navn]+kronerIndbetalt) > 4500):
+            print(Fore.RED + f'{navn} vil være gyldig til at modtage {(fodboldtur[navn] + kronerIndbetalt) - 4500} tilbage', Fore.BLACK + ' \n\n')
+        else:
+            pass
 
     # Validering af indtastningen (Tænk nu hvis man tastede forkert!...)
         print('Vil du gemme personens opdateret data Y/N?')
@@ -120,10 +128,8 @@ def missingPaymentsFull():
         for k,v in fodboldtur.items():
             if v < 4500:
                 paymentRemaining = 4500 - v
-                try:
-                    print(f'{k} har betalt {v} og mangler at betale {paymentRemaining}')
-                except:
-                    print('string fucked up')
+                print(f'{k} har betalt {v} og mangler at betale {paymentRemaining}')
+
 
         betalinger()
 
