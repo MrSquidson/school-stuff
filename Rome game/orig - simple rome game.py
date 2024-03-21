@@ -56,7 +56,8 @@ def executeActions(): # Execute actions for this season
         pass
     if season == 'Fall':
         if expandReady == True:
-            print('expand')
+            print('Expanding your empires influence')
             # Resolve expansion
         
         if building == True:
+            
