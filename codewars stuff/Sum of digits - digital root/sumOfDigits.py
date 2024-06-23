@@ -37,14 +37,14 @@ if digital_root(test) != answer:
 test = 942
 answer = 6
 if digital_root(test) != answer:
-    print(f"Failed test 1 got return {digital_root(test)} should have been {answer}")
+    print(f"Failed test 2 got return {digital_root(test)} should have been {answer}")
 
 test = 132189
 answer = 6
 if digital_root(test) != answer:
-    print(f"Failed test 1 got return {digital_root(test)} should have been {answer}")
+    print(f"Failed test 3 got return {digital_root(test)} should have been {answer}")
 
 test = 493193
 answer= 2
 if digital_root(test) != answer:
-    print(f"Failed test 1 got return {digital_root(test)} should have been {answer}")
+    print(f"Failed test 4 got return {digital_root(test)} should have been {answer}")
